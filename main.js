@@ -1,10 +1,12 @@
-function timePhp(){
+$('#myform').submit(function(e){
+  e.preventDefault();
+  var str = $(this).serialize();
   $.ajax({
-    url: 'time.php',
-    success: function(currentTime){
-      $('h2.time').html(currentTime);
+    type: 'POST',
+    url: 'hello.php',
+    data: str,
+    success: function(data){
+      $('#result').html(data);
     }
   });
-}
-
-setInterval(timePhp, 1000);
+});

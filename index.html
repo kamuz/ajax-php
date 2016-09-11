@@ -5,7 +5,12 @@
   <title>Time from PHP</title>
 </head>
 <body>
-  <h2 class="time"></h2>
+<form id="myform" action="hello.php" method="POST">
+  <label for="email">Enter your email:</label>
+  <input type="text" name="email" id="email">
+  <button type="submit">Send</button>
+</form>
+<div id="result"></div>
 <script src="jquery.js"></script>
 <script src="main.js"></script>
 </body>
